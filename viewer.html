@@ -10,16 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 <body>
-    <md-block src="default.md">
-        # The file isn't loaded
-        For instant alternative, go to [Github site](https://github.com/theArnoll/queses/tree/main)
-    </md-block>
+    <md-block src="default.md"></md-block>
+    <script>
+        import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
+        let url = new URLSearchParams(window.location.search);
+        document.querySelector("md-block").src = url.get('source');
+    </script>
 </body>
-<script>
-    import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
-    let url = new URLSearchParams(window.location.search);
-    document.querySelector("md-block").src = url.get('source');
-</script>
 </html>
