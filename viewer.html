@@ -36,8 +36,6 @@
             return res.text();
         }
 
-        console.warn("Local fetch failed:", err1);
-
         try {
             const raw = `https://raw.githubusercontent.com/theArnoll/queses/main/${src}`;
             const content2 = await tryFetch(raw);
