@@ -12,13 +12,11 @@
 </head>
 <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 <body>
-    
-    <h2>目錄</h2>
-    <table>
-        <tr>
-            <th>First</th>
-            <a href="./viewer.html?source=20250912.md"><td>yi gorl</td></a>
-        </tr>
-    </table>
+    <md-block src="./default.md">
+        
+    </md-block>
 </body>
+<script>
+    document.querySelector("md-block").src = url.get('source') || './default.md';
+</script>
 </html>
