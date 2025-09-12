@@ -20,7 +20,7 @@
     <script>
         // import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
         let url = new URLSearchParams(window.location.search);
-        document.querySelector("md-block").src = url.get('source');
+        document.querySelector("md-block").src = "https://raw.githubusercontent.com/theArnoll/queses/main/" + url.get('source');
     </script>
 </body>
 </html>
