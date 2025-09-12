@@ -16,10 +16,10 @@
         # The file isn't loaded
         For instant alternative, go to [Github site](https://github.com/theArnoll/queses/tree/main)
     </md-block>
-    <script>
-        import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
-        let url = new URLSearchParams(window.location.search);
-        document.querySelector("md-block").src = url.get('source');
-    </script>
 </body>
+<script>
+    import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
+    let url = new URLSearchParams(window.location.search);
+    document.querySelector("md-block").src = url.get('source');
+</script>
 </html>
