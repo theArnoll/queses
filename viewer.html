@@ -17,6 +17,7 @@
         For instant alternative, go to [Github site](https://github.com/theArnoll/queses/tree/main)
     </md-block>
 
+    <button type="button" src="index.html" class="backbtn">Back</button>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script>
     (async () => {
@@ -42,7 +43,6 @@
             console.log("Loaded markdown from GitHub raw:", raw);
         } catch (err2) {
             console.error("Both fetches failed:", err2);
-            // md.mdContent = `# Error\nCannot load \`${src}\`\n\n- GitHub raw failed: ${err2}`;
         }
     })();
     </script>
