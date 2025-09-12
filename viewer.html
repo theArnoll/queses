@@ -45,7 +45,7 @@
             console.log("Loaded markdown from GitHub raw:", raw);
         } catch (err2) {
             console.error("Both fetches failed:", err2);
-            md.mdContent = `# Error\nCannot load \`${src}\`\n\n- Local failed: ${err1}\n- GitHub raw failed: ${err2}`;
+            md.mdContent = `# Error\nCannot load \`${src}\`\n\n- GitHub raw failed: ${err2}`;
         }
     })();
     </script>
