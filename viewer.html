@@ -24,7 +24,6 @@
         const params = new URLSearchParams(location.search);
         const src = params.get("source");
 
-        // 如果沒帶參數 → 載入 default.md
         if (!src) {
             md.setAttribute("src", "default.md");
             return;
@@ -43,7 +42,7 @@
             console.log("Loaded markdown from GitHub raw:", raw);
         } catch (err2) {
             console.error("Both fetches failed:", err2);
-            md.mdContent = `# Error\nCannot load \`${src}\`\n\n- GitHub raw failed: ${err2}`;
+            // md.mdContent = `# Error\nCannot load \`${src}\`\n\n- GitHub raw failed: ${err2}`;
         }
     })();
     </script>

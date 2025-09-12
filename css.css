@@ -2,4 +2,18 @@ body{
     background-color: #222;
     color: #eee;
     font-family: "Roboto", "Noto Sans TC", "Noto Sans KR", "Cascadia Code", sans-serif;
+    margin-left: 5vw; margin-right: 5vw;
+}
+
+a{
+    color: #4ea1d3;
+    text-decoration: none;
+}
+
+code{
+    background-color: #333;
+    color: #eee;
+    font-family: "Cascadia Code", monospace;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
