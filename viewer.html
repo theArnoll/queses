@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +13,41 @@
 
 <body>
     <md-block>
-        # The file isn't loaded
+        # The file isn't loaded  
         For instant alternative, go to [Github site](https://github.com/theArnoll/queses/tree/main)
     </md-block>
+
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script>
-        // import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "https://md-block.verou.me/md-block.js";
-        let url = new URLSearchParams(window.location.search);
-        document.querySelector("md-block").src = "https://raw.githubusercontent.com/theArnoll/queses/main/" + url.get('source');
+    (async () => {
+        const md = document.querySelector("md-block");
+        const params = new URLSearchParams(location.search);
+        const src = params.get("source");
+
+        // 如果沒帶參數 → 載入 default.md
+        if (!src) {
+            md.setAttribute("src", "default.md");
+            return;
+        }
+
+        async function tryFetch(url) {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.text();
+        }
+
+        console.warn("Local fetch failed:", err1);
+
+        try {
+            const raw = `https://raw.githubusercontent.com/theArnoll/queses/main/${src}`;
+            const content2 = await tryFetch(raw);
+            md.mdContent = content2;
+            console.log("Loaded markdown from GitHub raw:", raw);
+        } catch (err2) {
+            console.error("Both fetches failed:", err2);
+            md.mdContent = `# Error\nCannot load \`${src}\`\n\n- Local failed: ${err1}\n- GitHub raw failed: ${err2}`;
+        }
+    })();
     </script>
 </body>
 </html>
