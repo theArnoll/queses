@@ -17,6 +17,7 @@
     </md-block>
 </body>
 <script>
+    let url = new URLSearchParams(window.location.search);
     document.querySelector("md-block").src = url.get('source') || './default.md';
 </script>
 </html>
