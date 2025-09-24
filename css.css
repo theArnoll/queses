@@ -37,6 +37,7 @@ code{
     font-size: 1.5em;
     width: 80vw;
     padding: auto;
+    margin-bottom: 0.5em;
 }
 .exerciselist th{
     text-align: right;
