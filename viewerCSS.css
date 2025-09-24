@@ -1,0 +1,14 @@
+table
+{
+    border-radius: 1.25vh;
+    background-color: #555;
+    padding: 0.25vh;
+    margin: 2vh 0;
+}
+th, td
+{
+    border-radius: 1vh;
+    padding: 1vh 2vh;
+    background-color: #222;
+    text-align: left;
+}
