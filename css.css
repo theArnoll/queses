@@ -31,6 +31,8 @@ code{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 10vh 0;
+
+    max-height: 50vh;
 }
 
 .exerciselist{
