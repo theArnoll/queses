@@ -20,7 +20,7 @@ code{
 }
 
 .title{
-    font-size: 6.5vw;
+    font-size: 6vw;
     font-weight: bold;
     font-family: "Exo 2", "Noto Sans TC", "Noto Sans KR", sans-serif;
     text-align: center;
@@ -30,9 +30,9 @@ code{
 
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    padding: 10vh 0;
+    padding: 8vh 0;
 
-    max-height: 50vh;
+    max-height: 4%;
 }
 
 .exerciselist{
@@ -73,4 +73,16 @@ code{
 {
     text-align: center;
     font-size: .75em;
+}
+
+.apcsStyle
+{
+    font-weight: bold;
+    color: #3889ca;
+}
+
+.apcsStlInc
+{
+    font-weight: bold;
+    color: #a3c320;
 }
