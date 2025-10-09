@@ -99,7 +99,7 @@ You still need $15 to purchase this
 
 #### 第二階段
 
-1.
+測資一
 
 ```
 1   35
@@ -111,7 +111,7 @@ You still need $15 to purchase this
 Thank you!
 ```
 
-2.
+測資二
 
 ```
 1   35

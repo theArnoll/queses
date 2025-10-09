@@ -86,3 +86,10 @@ code{
     font-weight: bold;
     color: #a3c320;
 }
+
+pre
+{
+    background-color: #111;
+    padding: 2vw;
+    border-radius: 2vw;
+}
