@@ -14,6 +14,7 @@
 
 若投入金額足夠，則顯示 `Thank you!`\
 若投入金額不足，則重複要求補足金額，輸出 `You still need $[  ] to purchase this`
+*金額不足: <span class="apcsStlInc">APCS Style</span>: 僅輸出，無重複輸入 | **功能導向**: 重複輸入直到金額足夠
 
 ---
 
@@ -23,9 +24,18 @@
 
 ### 第一階段
 
+測資一
+
 ```
 2
 40
+```
+
+測資二
+
+```
+3
+30
 ```
 
 第一行為選擇的商品代號
@@ -33,9 +43,18 @@
 
 ### 第二階段
 
+測資一
+
 ```
 2
 0 4 0 0
+```
+
+測資二
+
+```
+3
+0 2 2 0
 ```
 
 第一行為選擇的商品代號
@@ -45,9 +64,13 @@
 
 ## 執行畫面
 
+[前往功能導向執行畫面](#功能導向)
+
 ### <span class="apcsStlInc">APCS Style</span>
 
 #### 第一階段
+
+測資一
 
 ```
 1   35
@@ -59,22 +82,45 @@
 Thank you!
 ```
 
-Desc
+測資二
+
+```
+1   35
+2   40
+3   45
+4   30
+3
+30
+You still need $15 to purchase this
+```
+
+先輸出商品代號和價格，然後開始讓使用者輸入\
+商品代號和價格之間用 tab 字元間隔，使用者要在新的一行輸入
 
 #### 第二階段
 
 1.
 
 ```
-
-
+1   35
+2   40
+3   45
+4   30
+2
+0 4 0 0
+Thank you!
 ```
 
 2.
 
 ```
-
-
+1   35
+2   40
+3   45
+4   30
+3
+0 2 2 0
+You still need $15 to purchase this
 ```
 
 ### 功能導向
@@ -82,25 +128,60 @@ Desc
 #### 第一階段
 
 ```
+#   Name        Cost
+1   Tea         35
+2   Americano   40
+3   Milk tea    45
+4   Sport drink 30
 
+Please enter the number of the drink you want to buy: 2
+Pay: 40
+Thank you!
+```
 
 ```
+#   Name        Cost
+1   Tea         35
+2   Americano   40
+3   Milk tea    45
+4   Sport drink 30
+
+Please enter the number of the drink you want to buy: 3
+Pay: 30
+You still need $15 to purchase this
+Pay: 5
+You still need $10 to purchase this
+Pay: 10
+Thank you!
+```
+
 
 #### 第二階段
 
 ```
+#   Name        Cost
+1   Tea         35
+2   Americano   40
+3   Milk tea    45
+4   Sport drink 30
 
-
+Please enter the number of the drink you want to buy: 2
+Pay 50x0    10x4    5x0 1x0
+Thank you!
 ```
 
 ```
+#   Name        Cost
+1   Tea         35
+2   Americano   40
+3   Milk tea    45
+4   Sport drink 30
 
-
-```
-
-#### 最終階段
-
-```
-
-
+Please enter the number of the drink you want to buy: 3
+Pay 50x0   10x2 5x2    1x0
+You still need $15 to purchase this
+Pay 50x0   10x0    5x1 1x0
+You still need $10 to purchase this
+Pay 50x0   10x1    5x0 1x0
+Thank you!
 ```
