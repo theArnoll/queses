@@ -31,8 +31,6 @@ code{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 8vh 0;
-
-    max-height: 4%;
 }
 
 .exerciselist{
@@ -69,7 +67,7 @@ code{
     background-color: #555;
 }
 
-.cpr
+.cpr/*ight*/
 {
     text-align: center;
     font-size: .75em;
@@ -90,6 +88,14 @@ code{
 pre
 {
     background-color: #111;
-    padding: 2vw;
-    border-radius: 2vw;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+code
+{
+    background-color: #111;
+    padding: 0.2vw 0.4vw;
+    border-radius: 0.4vw;
+    display: inline-block;
 }
